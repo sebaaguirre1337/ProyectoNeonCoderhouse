@@ -1,0 +1,30 @@
+@use 'variables' as *;
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    h1 {
+        color: $primary;
+        text-shadow: 0 0 10px $primary;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+
+        li {
+            a {
+                color: $text;
+                text-decoration: none;
+                transition: 0.3s;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

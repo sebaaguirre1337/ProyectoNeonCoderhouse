@@ -1,0 +1,17 @@
+@use 'mixins' as *;
+
+@include responsive(mobile) {
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        width: 100%;
+        max-width: 280px;
+    }
+}

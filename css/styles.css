@@ -1,0 +1,251 @@
+:root {
+    --primary: #00f0ff;
+    --secondary: #ff2e63;
+    --bg: #0a0a0f;
+    --card: #12121a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: var(--bg);
+    color: #fff;
+}
+
+/* NAV */
+header {
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--primary);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav h1 {
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--primary);
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: radial-gradient(circle at top, rgba(0,240,255,0.2), transparent),
+                url('../img/gym.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 4rem;
+    text-shadow: 0 0 20px var(--primary);
+}
+
+.hero p {
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* BOTÓN */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--primary);
+    color: #000;
+    box-shadow: 0 0 20px var(--primary);
+}
+
+/* SECCIONES */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background: var(--card);
+    padding: 25px;
+    width: 280px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    position: relative;
+    
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid var(--primary);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card:hover::before {
+    opacity: 1;
+    box-shadow: 0 0 25px var(--primary);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--primary);
+    opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+}
+
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00f0ff;
+    text-shadow: 0 0 10px #00f0ff;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #00f0ff;
+    margin-bottom: 15px;
+}
+
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+/* Hover estilo esports */
+.gallery img:hover {
+    transform: scale(1.05);
+    border: 2px solid #00f0ff;
+    box-shadow: 0 0 20px #00f0ff;
+}
+
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.section p {
+    max-width: 800px;
+    margin: 15px auto;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.map {
+    margin-top: 20px;
+    border: 2px solid #00f0ff;
+    box-shadow: 0 0 20px #00f0ff;
+}
+
+.card {
+    color: #ffffff;
+}
+
+.card h3,
+.card p {
+    color: #ffffff;
+    opacity: 1;
+}
