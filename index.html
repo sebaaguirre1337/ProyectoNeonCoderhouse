@@ -16,7 +16,13 @@
 <header>
     <nav>
         <h1>GYM POWER</h1>
-        <ul>
+
+         <div class="menu-toggle" id="menu-toggle">       
+        ☰
+        </div>
+
+
+        <ul id="nav-menu">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="pages/clases.html">Clases</a></li>
             <li><a href="pages/planes.html">Planes</a></li>
@@ -55,6 +61,16 @@
 <footer>
     <p>© 2026 GYM POWER</p>
 </footer>
+
+<script>
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("nav-menu");
+
+toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+});
+</script>
+
 
 </body>
 

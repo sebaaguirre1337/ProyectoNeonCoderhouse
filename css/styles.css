@@ -249,3 +249,56 @@ footer {
     color: #ffffff;
     opacity: 1;
 }
+
+
+
+
+
+
+
+
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: #00f0ff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+        gap: 15px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+}
