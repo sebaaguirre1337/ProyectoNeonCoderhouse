@@ -5,7 +5,7 @@
 }
 
 @mixin neon-glow($color) {
-    text-shadow: 0 0 10px $color;
+    text-shadow: 0 0 11px $color;
 }
 
 @mixin responsive($breakpoint) {
